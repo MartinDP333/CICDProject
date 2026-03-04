@@ -4,7 +4,7 @@ name: Continous Delivery
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
+on:
   push:
     branches: [ "master" ]
 
@@ -46,6 +46,6 @@ jobs:
         with:
           context: src/CiCd
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}.latest
+          tags: ${{ env.REGISTRY }}/martindp333/${{ env.IMAGE_NAME }}.latest
 
 
